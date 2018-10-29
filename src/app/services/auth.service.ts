@@ -41,11 +41,11 @@ export class AuthService {
 export function getClientSettings(): UserManagerSettings {
   return {
     authority: 'https://identity.reckon.com',
-    client_id: 'angular_spa',
+    client_id: '82d34506-1d2d-4523-aa94-fbe247538322',
     redirect_uri: 'http://localhost:4200/auth-callback',
     post_logout_redirect_uri: 'http://localhost:4200/',
     response_type: "id_token token",
-    scope: "openid profile api1",
+    scope: "openid read write",
     filterProtocolClaims: true,
     loadUserInfo: true,
     automaticSilentRenew: true,
