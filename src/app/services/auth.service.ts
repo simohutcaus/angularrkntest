@@ -32,6 +32,8 @@ export class AuthService {
   
   completeAuthentication(): Promise<void> {
       return this.manager.signinRedirectCallback().then(user => {
+        console.log(user.access_token);
+        console.log('this is user ' + JSON.stringify(user));
           this.user = user;
       });
     }
@@ -47,7 +49,7 @@ export function getClientSettings(): UserManagerSettings {
     response_type: "id_token token",
     scope: "openid read write",
     filterProtocolClaims: true,
-    loadUserInfo: true,
+    loadUserInfo: false,
     automaticSilentRenew: true,
     silent_redirect_uri: 'http://localhost:4200/silent-refresh.html'
   };

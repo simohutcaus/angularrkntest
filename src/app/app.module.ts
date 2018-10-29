@@ -7,16 +7,20 @@ import { ProtectedComponent } from './protected/protected.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import {AuthService} from './services/auth.service';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
+import { CallApiComponent } from './call-api/call-api.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProtectedComponent,
-    AuthCallbackComponent
+    AuthCallbackComponent,
+    CallApiComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [AuthGuardService, AuthService],
   bootstrap: [AppComponent]
