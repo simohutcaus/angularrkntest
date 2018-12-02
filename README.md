@@ -1,27 +1,30 @@
-# Myapp
+# Reckon One Sample Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+One Paragraph of project description goes here
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the project from Github and run NPM install. You need NodeJS installed. V10.13 was used during the development of this sample code.
 
-## Code scaffolding
+### Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+NodeJS (10.13.0 was used for development)
 
-## Build
+### Installing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Git clone this repository locally.
 
-## Running unit tests
+Open the folder where the data was cloned and run NPM install.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Once the depedencies are installed you will need to edit the auth.service.ts file, more specifically the getClientSettings() function to set your client id. The redirect_uri should be left as localhost:4200 for this application. Please note that the sample code uses the implicit flow. Authorization code may be provided in a future update.
 
-## Running end-to-end tests
+## Authors
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* **Simon Hutchinson** - *Initial work* - [PurpleBooth](https://github.com/simohutcaus)
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project is licensed under the MIT License
+
+
+

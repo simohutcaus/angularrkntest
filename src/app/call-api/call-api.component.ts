@@ -14,11 +14,7 @@ export class CallApiComponent implements OnInit {
   public accesstoken: any;
 
   constructor(private http: Http, public router: Router) {
-    router.events.subscribe(s => {
-        let params = new URLSearchParams(s.url.split('#')[1]);
-        this.accesstoken = params.get('access_token');
-        console.log('this is access token 2 ' + this.accesstoken);
-    });
+
    }
 
   ngOnInit() {
