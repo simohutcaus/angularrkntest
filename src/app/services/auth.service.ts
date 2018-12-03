@@ -30,11 +30,18 @@ export class AuthService {
       return this.manager.signinRedirect();
     }
   
-  completeAuthentication(): Promise<void> {
+    completeAuthentication(): Promise<string> {
       return this.manager.signinRedirectCallback().then(user => {
+<<<<<<< HEAD
         // console.log(user.access_token);
         // console.log('this is user ' + JSON.stringify(user));
           this.user = user;
+=======
+        console.log(user.access_token);
+        this.user = user;
+        const t = user.access_token;
+        return t;
+>>>>>>> 2395159c777267b597759ee00efbc197d83a1f7b
       });
     }
 

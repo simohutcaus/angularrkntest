@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    text-align: center;
+    align-items: stretch;
+    
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    background: tomato;
+}
+
+.footer {
+    background: lightgreen;
+  }
+
+  .box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .test {
+      background: yellow;
+  }

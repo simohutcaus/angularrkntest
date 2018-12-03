@@ -1,3 +1,43 @@
+<h2>
+  This is the access token {{accesstoken}}
+</h2>
 <p>
-  auth-callback works!
 </p>
+<div style="text-align:left;width:500px;">
+  <h1>
+      {{ title }}
+  </h1>
+  <div style="text-align:center">;
+  <table style="margin-bottom: 3%;" *ngIf="rknresponse" class="pure-table">
+      <!-- ADD HEADERS -->
+      <tr>
+          <th>ID</th>
+          <th>CashBook Name</th>
+          <th>Country</th>
+      </tr>
+
+      <!-- BIND ARRAY TO TABLE -->
+      <tr *ngFor="let book of arrBirds">
+          <td>{{book.BookId}}</td>
+          <td>{{book.BookName}}</td>
+          <td>{{book.Country}}</td>
+      </tr>
+  </table>
+  
+  <table *ngIf="rkninvoice" class="pure-table">
+        <!-- ADD HEADERS -->
+        <tr>
+            <th>InvoiceNumber</th>
+            <th>Balance</th>
+            <th>DueDate</th>
+            <th>Is Overdue</th>
+        </tr>
+        <!-- BIND ARRAY TO TABLE -->
+        <tr *ngFor="let invoice of rkninvoice">
+            <td>{{invoice.InvoiceNumber}}</td>
+            <td>{{invoice.Balance}}</td>
+            <td>{{invoice.DueDate}}</td>
+            <td>{{invoice.IsOverdue}}</td>
+        </tr>
+    </table>
+</div>
